@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #eeeeee;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header__text {
+    font-size: 50px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.container {
+    /* Definicion de la Grid */
+    display: grid;
+    /* Tamaño de las columnas */
+    grid-template-columns: 1fr 3fr 1fr;
+    /* Tamaño de las filas */
+    grid-template-rows: 150px 300px;
+    /* Espaciados entre elementos */
+    /* gap: 20px; */
+    grid-column-gap: 20px;
+    grid-row-gap: 2px;
+
+    width: 90%;
+    max-width: 1000px;
+    border: 5px solid black;
+    margin: auto;
+    font-size: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.container__grids {
+    display: block;
+    padding: 20px;
+    color: #fff;
+    background: #2f89fc;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, .25);
+}
+
+/* https: //www.youtube.com/watch?v=3m3g_ppRH24&list=PLhSj3UTs2_yWsFd43wpLog5HUFzDgIbWj&index= */
