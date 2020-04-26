@@ -6,12 +6,12 @@
     grid-template-areas:
         "header     header      header"
         "sidebar-1  contenido   sidebar-2"
-        "sidebar-1  widgets     sidebar-2"
+        "sidebar-1  widget     sidebar-2"
         "footer     footer      footer";
 }
 
 .contenedor .header {
-    background: orange;
+    background: #ff8000;
     grid-area: header;
 }
 
@@ -20,5 +20,23 @@
     grid-area: sidebar-1;
 }
 
-/* https://www.youtube.com/watch?v=GUXYOsbKYoY&list=PLhSj3UTs2_yWsFd43wpLog5HUFzDgIbWj&index=6
-min 13.20 */
+.contenedor .contenido {
+    background: white;
+    color: black;
+    grid-area: contenido;
+}
+
+.contenedor .widget {
+    background: #ff8000;
+    grid-area: widget;
+}
+
+.contenedor .sidebar-2 {
+    background: #393e46;
+    grid-area: sidebar-2;
+}
+
+.contenedor .footer {
+    background: #222831;
+    grid-area: footer;
+}
