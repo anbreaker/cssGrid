@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: white;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 20px auto;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+
+    grid-template-areas:
+        "header header header"
+        "content content sidebar"
+        "widget-1 widget-2 sidebar"
+        "footer footer footer";
+}
+
+.container__header,
+.container__content,
+.container__sidebar,
+.container__widget,
+.container__footer {
+    background: white;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.container__header {
+    background: #12203E;
+    color: white;
+    grid-area: header;
+}
+
+.container__content {
+    grid-area: content;
+}
+
+.container__sidebar {
+    grid-column: 3 / 4;
+    background: #FFAA3D;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    grid-area: sidebar;
+}
+
+.container__widget--1,
+.container__widget--2 {
+    background: #55a8fd;
+    color: white;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container__widget--1 {
+    grid-area: widget-1;
+}
+
+.container__widget--2 {
+    grid-area: widget-2;
+
+}
+
+
+.container__footer {
+    background: #12203E;
+    color: white;
+    grid-area: footer;
+}
+
+
+/* No media query since this is the default in Bootstrap */
+/* https://getbootstrap.com/docs/4.0/layout/overview/ */
+
+/* Medium devices (tablets, 768px and up) */
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-areas:
+            "header header header"
+            "content content content"
+            "sidebar sidebar sidebar"
+            "widget-1 widget-1 widget-2"
+            "footer footer footer";
+    }
+}
